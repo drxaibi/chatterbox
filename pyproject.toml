@@ -1,0 +1,37 @@
+[project]
+name = "chatterbox-tts"
+version = "0.1.6"
+description = "Chatterbox: Open Source TTS and Voice Conversion by Resemble AI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+    {name = "drxaibi", email = "drxaibi@users.noreply.github.com"}
+]
+dependencies = [
+    "numpy>=1.24.0,<1.26.0",
+    "librosa==0.11.0",
+    "s3tokenizer",
+    "torch==2.6.0",
+    "torchaudio==2.6.0",
+    "transformers==4.46.3",
+    "diffusers==0.29.0",
+    "conformer==0.3.2",
+    "safetensors==0.5.3",
+    "spacy-pkuseg",
+    "pykakasi==2.3.0",
+    "gradio==5.44.1",
+    "pyloudnorm",
+    "omegaconf"
+]
+
+[project.urls]
+Homepage = "https://github.com/drxaibi/chatterbox"
+Repository = "https://github.com/drxaibi/chatterbox"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
