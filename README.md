@@ -145,6 +145,10 @@ Evaluation reports:
 - Chatterbox Turbo vs Cartesia Sonic 3
 - Chatterbox Turbo vs VibeVoice 7B
 
+<p align="center">
+  <img src="./comaprisons.png" alt="Comparison with ElevenLabs, Cartesia, and VibeVoice" width="1200" style="max-width: 100%; height: auto;" />
+</p>
+
 These evaluations were conducted under identical conditions and are publicly accessible via Podonos.
 
 ## Acknowledgements
