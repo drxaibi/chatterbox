@@ -1,4 +1,7 @@
-![Chatterbox Turbo Image](./Chatterbox-Turbo.jpg)
+
+<p align="center">
+  <img src="./chatterbox.png" alt="Chatterbox" width="1200" style="max-width: 100%; height: auto;" />
+</p>
 
 
 # Chatterbox TTS
@@ -9,7 +12,6 @@ We are excited to introduce **Chatterbox-Turbo**, our most efficient model yet. 
 
 **Paralinguistic tags** are now native to the Turbo model, allowing you to use `[cough]`, `[laugh]`, `[chuckle]`, and more to add distinct realism. While Turbo was built primarily for low-latency voice agents, it excels at narration and creative workflows.
 
-<img width="1200" height="600" alt="Podonos Turbo Eval" src="https://storage.googleapis.com/chatterbox-demo-samples/turbo/podonos_turbo.png" />
 
 ### ⚡ Model Zoo
 
