@@ -1,5 +1,8 @@
+$scriptDir = $PSScriptRoot
+$escapedScriptDir = $scriptDir.Replace("'", "''")
+
 $command = @'
-Set-Location 'C:\Users\user\Desktop\chatterbox'
+Set-Location '__SCRIPT_DIR__'
 & '.\.venv\Scripts\Activate.ps1'
 
 Write-Host ''
@@ -14,13 +17,15 @@ Write-Host ((' ' * $titleIndent) + $title) -ForegroundColor Cyan
 Write-Host ((' ' * $subtitleIndent) + $subtitle) -ForegroundColor Cyan
 Write-Host ('=' * $lineWidth) -ForegroundColor Cyan
 Write-Host ''
-Write-Host '(.venv) C:\Users\user\Desktop\chatterbox' -ForegroundColor Green
+Write-Host ("(.venv) {0}" -f (Get-Location).Path) -ForegroundColor Green
 
 & '.\.venv\Scripts\python.exe' '.\gradio_tts_app.py'
 if ($LASTEXITCODE -ne 0) {
     Write-Host ("App exited with code $LASTEXITCODE") -ForegroundColor Red
 }
 '@
+
+$command = $command.Replace('__SCRIPT_DIR__', $escapedScriptDir)
 
 Start-Process powershell -ArgumentList @(
     "-NoExit",
