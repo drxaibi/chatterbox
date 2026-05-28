@@ -27,8 +27,11 @@ if ($LASTEXITCODE -ne 0) {
 
 $command = $command.Replace('__SCRIPT_DIR__', $escapedScriptDir)
 
+$helperScriptPath = Join-Path ([System.IO.Path]::GetTempPath()) ("chatterbox-start-multilingual-{0}.ps1" -f ([guid]::NewGuid().ToString('N')))
+Set-Content -Path $helperScriptPath -Value $command -Encoding UTF8
+
 Start-Process powershell -ArgumentList @(
     "-NoExit",
     "-ExecutionPolicy", "Bypass",
-    "-Command", $command
+    "-File", $helperScriptPath
 )
